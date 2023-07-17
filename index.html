@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="ease-in">
+        <div class="main-container">
+                <div class="navbar">
+                    <img src="./media/USA.svg" alt="" class="logo">
+                    <h1 class="title">SSN Generator</h1>
+            </div>
+        </div>
+        <div class="right-container ease-right">
+            <div class="top-holder">
+                <div class="top-text">
+                    <p>This form will take your information and return a unique ID.</p>
+                    <p>Please make sure to only input legally valid information as it will be
+                        verified by the State Department.</p>
+                    <p>Sign up below to get started.</p>
+                    <p class="welcome">Welcome to the United States! <br> 
+                        In God we trust.
+                    </p>
+                </div>
+            </div>
+            <form action="">
+                <div class="form-holder">
+                    <div class="form">
+                        <div class="names">
+                            <div class="input-container">
+                                <label for="f-name"></label>
+                                <input type="text" id="f-name" name="f-name" pattern="(^[A-Za-z]+$)" required>
+                                <span>
+                                    First name
+                                </span>
+                                <div class="error"></div>
+                            </div>
+                            <div class="input-container">
+                                <label for="l-name"></label>
+                                <input type="text" id="l-name" name="l-name" pattern="(^[A-Za-z]+$)" required>
+                                <span>
+                                    Last name
+                                </span>
+                                <div class="error"></div>
+                            </div>
+                            <div class="input-container">
+                                <label for="DOB"></label>
+                                <input type="date" name="DOB" id="DOB" placeholder="" required>
+                                <span>Date of Birth</span>
+                                <div class="error"></div>
+                            </div>
+                        </div>
+                        <div class="money-info">
+                            <div class="address-container">
+                                <fieldset>
+                                    <!-- <legend>Address</legend> -->
+                                    <div class="input-container">
+                                        <label for="s-address"></label>
+                                        <input type="text" id="s-address" name="s-address" pattern="(\d*)\s(\w*)\s(\w*)" placeholder="" required>
+                                        <span>Street Address</span>
+                                        <div class="error"></div>
+                                    </div>
+                                    <div class="input-container">
+                                        <label for="city"></label>
+                                        <input type="text" id="city" name="city" pattern="(^[A-Za-z]+$)" required>
+                                        <span>City</span>
+                                        <div class="error"></div>
+                                        <!-- this regex, (^[A-Za-z]+$) matches the start of the string, any combo of letters, and then the end of the string -->
+                                    </div>
+                                    <!-- <div class="input-container">
+                                        <label for="state"></label>
+                                        <select name="state" id="state">
+                                            <option value="AL">AL</option>
+                                            <option value="AK">AK</option>
+                                            <option value="AZ">AZ</option>
+                                            <option value="AR">AR</option>
+                                            <option value="CA">CA</option>
+                                            <option value="CO">CO</option>
+                                            <option value="CT">CT</option>
+                                            <option value="DE">DE</option>
+                                            <option value="FL">FL</option>
+                                            <option value="GA">GA</option>
+                                            <option value="HI">HI</option>
+                                            <option value="ID">ID</option>
+                                            <option value="IL">IL</option>
+                                            <option value="IN">IN</option>
+                                            <option value="IA">IA</option>
+                                            <option value="KS">KS</option>
+                                            <option value="KY">KY</option>
+                                            <option value="LA">LA</option>
+                                            <option value="ME">ME</option>
+                                            <option value="MD">MD</option>
+                                            <option value="MA">MA</option>
+                                            <option value="MI">MI</option>
+                                            <option value="MN">MN</option>
+                                            <option value="MS">MS</option>
+                                            <option value="MO">MO</option>
+                                            <option value="MT">MT</option>
+                                            <option value="NE">NE</option>
+                                            <option value="NV">NV</option>
+                                            <option value="NH">NH</option>
+                                            <option value="NJ">NJ</option>
+                                            <option value="NM">NM</option>
+                                            <option value="NY">NY</option>
+                                            <option value="NC">NC</option>
+                                            <option value="ND">ND</option>
+                                            <option value="OH">OH</option>
+                                            <option value="OK">OK</option>
+                                            <option value="OR">OR</option>
+                                            <option value="PA">PA</option>
+                                            <option value="RI">RI</option>
+                                            <option value="SC">SC</option>
+                                            <option value="SD">SD</option>
+                                            <option value="TN">TN</option>
+                                            <option value="TX">TX</option>
+                                            <option value="UT">UT</option>
+                                            <option value="VT">VT</option>
+                                            <option value="VA">VA</option>
+                                            <option value="WA">WA</option>
+                                            <option value="WV">WV</option>
+                                            <option value="WI">WI</option>
+                                            <option value="WY">WY</option>
+                                        </select>
+                                        <span>State</span>
+                                        <div class="error"></div>
+                                    </div> -->
+                                    <div class="input-container">
+                                        <label for="zip"></label>
+                                        <input type="text" id="zip" name="zip" minlength="5" maxlength="10" pattern="(\d{5}([\-]\d{4})?)" required>
+                                        <span>Zipcode</span>
+                                        <div class="error"></div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <div class="CC-container">
+                                <fieldset>
+                                    <!-- <legend>Payment Information</legend> -->
+                                    <!-- <div class="input-container">
+                                        <label for="card"></label>
+                                        <select name="card" id="card">
+                                            <option value="visa">Visa</option>
+                                            <option value="mc">Mastercard</option>
+                                            <option value="amex">American Express</option>
+                                        </select>
+                                        <span>Card</span>
+                                        <div class="error"></div>
+                                    </div> -->
+                                    <div class="input-container">
+                                        <label for="card-number"></label>
+                                        <input type="tel" id="card-number" name="card-number" minlength="16" maxlength="16" required>
+                                        <span>Card number</span>
+                                        <div class="error"></div>
+                                    </div>
+                                    <div class="input-container">
+                                        <label for="expiration"></label>
+                                        <input type="text" id="expiration" required pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$">
+                                        <span>Expiration Date</span>
+                                        <div class="error"></div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="button">
+                    <button class="btn" id="generate" type="button">Generate</button>
+                </div>
+            </form>
+            <div class="log-in">
+                <p>No health insurance?</p>
+                <a href="https://healthcare.gov" target="_blank">Purchase here</a>
+            </div>
+            <div class="ssn">
+                <h6></h6>
+                <h6></h6>
+                <h6></h6>
+                <h6></h6>
+                <h6></h6>
+                <h6></h6>
+                <h6></h6>
+                <h6></h6>
+                <h6></h6>
+            </div>
+        </div>
+    </main>
+<script src="form.js"></script>
+</body>
+</html>

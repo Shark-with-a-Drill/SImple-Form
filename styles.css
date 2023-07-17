@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root {
+    --green: rgb(33, 250, 131);
+    --red: rgb(252, 86, 108);
+    --dusky-green: rgb(6, 170, 94);
+    --opac-white: rgba(255, 255, 255, .8);
+    --form-txt:  rgba(255, 255, 255, .5);
+    --darky: #1d2b3a;
+    --light-grey: rgb(105, 105, 105);
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    background-color: #002868;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+input[type='date']:not(:focus):in-range::-webkit-datetime-edit-year-field,
+input[type='date']:not(:focus):in-range::-webkit-datetime-edit-month-field,
+input[type='date']:not(:focus):in-range::-webkit-datetime-edit-day-field,
+input[type='date']:not(:focus):in-range::-webkit-datetime-edit-text {
+    color: transparent;
+  }
+
+
+main {
+    display: flex;
+}
+
+.main-container {
+    background-image: url(./media/SSN.png);
+    background-position: center;
+    background-repeat: repeat;
+    background-size: auto;
+    height: 100vh;
+    width: 35vw;
+}
+.navbar {
+    display: flex;
+    flex-flow: row wrap;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: relative;
+    top: 10vh;
+    gap: 1vw;
+    padding: 15px 0;
+    justify-content: center;
+    align-items: center;
+}
+.logo {
+    height: 7em;
+}
+.navbar > h1 {
+    color: white;
+    font-size: 250%;
+    font-weight: 700;
+    text-align: center;
+}
+
+.right-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #babeca;
+}
+
+.top-holder {
+    background-color: #002868e0;
+    width: 65vw;
+}
+
+.top-text {
+    margin-top: 15em;
+    margin-left: 2em;
+}
+
+.top-text p {
+    font-size: 150%;
+    font-weight: 500;
+    letter-spacing: .04em;
+    line-height: 1.1;
+    color: white;
+}
+
+.welcome {
+    margin-top: 1.5em;
+    margin-bottom: 3em;
+}
+
+.form-holder {
+    background-color: #cacdd6;
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.107);
+}
+.form {
+    margin-left: 2em;
+    padding-bottom: 20px;
+}
+
+.names {
+    display: flex;
+    flex-wrap: wrap;
+}
+.input-container {
+    position: relative;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+.money-info {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+button {
+    background-color: #edae49;
+    border-radius: 10px;
+    font-size: 130%;
+    color: white;
+    padding: 8px 50px 8px 50px;
+    border: 0;
+    margin: 1.5em 2em 1em 2em;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.217);
+}
+button:hover {
+    cursor: pointer;
+}
+
+.valid-button {
+    background-color: #397367;
+    transition: background-color 0.5s ease;
+}
+.invalid-button {
+    background-color: #9b2915;
+    transition: background-color 0.5s ease;
+}
+
+.log-in {
+    display: flex;
+    margin-left: 2em;
+}
+.log-in p, .log-in a {
+    font-size: 105%;
+    padding-right: 0.5em;
+    font-weight: 500;
+}
+a:link, a:visited {
+    color: #397367;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.ssn {
+    display: flex;
+    margin-left: 2em;
+    margin-top: 3em;
+}
+.ssn h6 {
+    font-weight: 700;
+    font-size: 350%;
+}
+
+@keyframes slide {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.ssn-ease-in {
+    animation: slide 0.7s ease forwards;
+}
+
+input {
+    display: block;
+    border-radius: 4px;
+    padding: 6px 6px 6px 10px;
+    background-color: #e7eaed;
+    border: 0;
+    border-bottom: 1px solid #00000070;
+    
+}
+span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    font-size: 15px;
+    letter-spacing: 0.05em;
+    pointer-events: none;
+    text-transform: uppercase;
+    transition: all .4s;
+}
+
+input:focus ~ span,
+input:valid ~ span{
+    font-size: 10px;
+    transform: translateX(4px) translateY(-7px);
+    font-size: 0.80em;
+    padding: 0 6px;
+    background-color: #edae49;
+    color: white;
+    border-radius: 2px;
+}
+input:focus-visible {
+    border: 1.5px solid  #edae49;
+    box-shadow: 0 0 5px rgb(0,0,0,.3);
+    outline: none;
+}
+input:valid {
+    border: 1.5px solid #397367;  
+}
+
+.ease-in {
+    animation: 1.3s 1 forwards cubic-bezier(.36,-0.01,.5,1.38) slideUp;animation-delay: 0s;
+}
+@keyframes slideUp {  
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: inherit;  }    
+}   
+
+.ease-right {
+    animation: 1.3s 1 forwards cubic-bezier(.36,-0.01,.5,1.38) slideRight;animation-delay: 0s;
+}
+@keyframes slideRight {              
+    0% { opacity: 0; transform: translateX(30px); }                
+    100% { opacity: 1; transform: translateX(0);   }
+}
