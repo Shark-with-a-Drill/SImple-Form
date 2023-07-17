@@ -1,10 +1,26 @@
-const inputs = document.querySelectorAll('input');
+const input = document.querySelectorAll('input');
+const inputs = [...input];
+const errors = [...document.querySelectorAll('.error')];
 const btn = document.querySelector('#generate');
 const SSNOut = document.querySelectorAll('.ssn h6');
 const h6Array = [...document.querySelectorAll('.ssn h6')];
+const fName = document.querySelector('#f-name');
+const lName = document.querySelector('#l-name');
+const DOB = document.querySelector('#DOB');
+const streetAddress = document.querySelector('#s-address');
+const city = document.querySelector('#city');
+const zipcode = document.querySelector('#zip');
+const card = document.querySelector('#card-number');
+const exp = document.querySelector('#expiration');
+
+function invalidateInput() {
+  if (!input.checkValidity()) {
+
+  }
+}
 
 function checkValidity() {
-    const allValid = [...inputs].every((input) => input.checkValidity());
+    const allValid = inputs.every((input) => input.checkValidity());
     if (allValid) {
         btn.classList.add('valid-button');
         btn.classList.remove('invalid-button');
@@ -16,7 +32,7 @@ function checkValidity() {
 }
 
 function generateSSN() {
-  const allValid = [...inputs].every((input) => input.checkValidity());
+  const allValid = inputs.every((input) => input.checkValidity());
   if (allValid && h6Array.length >= 9) {
     for (let i = 0; i < 9; i++) {
       setTimeout(() => {
@@ -30,7 +46,17 @@ function generateSSN() {
   }
 }
 
-inputs.forEach((input) => {
+input.forEach((input) => {
     input.addEventListener('input', checkValidity);
-})
+});
+inputs.forEach((input, index) => {
+  input.addEventListener('input', () => {
+    if (!input.checkValidity()) {
+      errors[index].innerText = 'Invalid input'; //forEach gets index from array it iterates over and it's content for that index (input) and both input and index can be used within the function
+    } else {
+      errors[index].innerText = '';
+    }
+  });
+});
 btn.addEventListener('click', generateSSN);
+

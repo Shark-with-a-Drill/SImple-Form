@@ -155,6 +155,12 @@ main {
     flex-wrap: wrap;
 }
 
+.error {
+    color: #9b2915;
+    padding-left: 10px;
+    padding-top: 2px;
+}
+
 button {
     background-color: #edae49;
     border-radius: 10px;
