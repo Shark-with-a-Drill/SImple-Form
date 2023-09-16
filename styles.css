@@ -229,8 +229,7 @@ input {
     padding: 6px 6px 6px 10px;
     background-color: #e7eaed;
     border: 0;
-    border-bottom: 1px solid #00000070;
-    
+    border-bottom: 1px solid #00000070;   
 }
 span {
     position: absolute;
@@ -262,6 +261,15 @@ input:focus-visible {
 input:valid {
     border: 1.5px solid #397367;  
 }
+input:invalid:not(:placeholder-shown) ~ span {
+    font-size: 10px;
+    transform: translateX(4px) translateY(-7px);
+    font-size: 0.80em;
+    padding: 0 6px;
+    background-color: #9e3f6e;
+    color: white;
+    border-radius: 2px;
+  }
 
 .ease-in {
     animation: 1.3s 1 forwards cubic-bezier(.36,-0.01,.5,1.38) slideUp;animation-delay: 0s;
