@@ -41,7 +41,7 @@ function generateSSN() {
           h6Array[i].innerText = RN; //check if array value exists before assigning value
           h6Array[i].classList.add('ssn-ease-in');
         }
-      }, i * 200);
+      }, i * 200); //async execution where values are ready when generate button is pressed, but are deployed every 200ms from the stack every loop iteration via setTimeout
     }
   }
 }
