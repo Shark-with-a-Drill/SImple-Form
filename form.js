@@ -13,12 +13,6 @@ const zipcode = document.querySelector('#zip');
 const card = document.querySelector('#card-number');
 const exp = document.querySelector('#expiration');
 
-function invalidateInput() {
-  if (!input.checkValidity()) {
-
-  }
-}
-
 function checkValidity() {
     const allValid = inputs.every((input) => input.checkValidity());
     if (allValid) {
